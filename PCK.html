@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<title>Computer Komponenter</title>
+<meta charset="utf-8">
+<meta>
+<link href="custom.css" type="text/css" rel="stylesheet">
+</meta>
+<body>
+  <header>
+    <h1 style="font-family: 'Montserrat', sans-serif;">Computer Komponenter</h1>
+  </header>
+
+   <p id="P1"> Denne hjemmeside vil tage dig igennem alle
+     <br>
+      komponenter som en computer indeholder
+   </p>
+
+  <section>
+    <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Forside')" id="defaultOpen">Forside</button>
+  <button class="tablinks" onclick="openCity(event, 'Bundkort')">Bundkort</button>
+  <button class="tablinks" onclick="openCity(event, 'CPU')">CPU</button>
+  <button class="tablinks" onclick="openCity(event, 'RAM')">RAM</button>
+  <button class="tablinks" onclick="openCity(event, 'GPU')">GPU</button>
+  <button class="tablinks" onclick="openCity(event, 'PSU')">PSU</button>
+  <button class="tablinks" onclick="openCity(event, 'Interfaces')">Interfaces</button>
+  <button class="tablinks" onclick="openCity(event, 'ESD')">ESD</button>
+</div>
+
+<!-- Tab content -->
+<div id="Forside" class="tabcontent">
+  <h3>Forside</h3>
+  <p class="Tbox">Denne hjemmeside er oprettet til at hjælpe dig med at forstå hvad en computer består af og hvordan en den fungere</p>
+</div>
+
+<div id="Bundkort" class="tabcontent">
+  <h3>Bundkort</h3>
+  <p class="Tbox">Bundkortet er den del i computeren der samler alle forbindelserne. Bundkortet har både PCIe stik og også processer socketet.</p>
+  <img class="imagecenter" src="GIGABYTE.png" alt="Bundkort" width="75%" height="75%">
+</div>
+
+<div id="CPU" class="tabcontent">
+  <h3>CPU</h3>
+  <p class="Tbox">CPU'en er hjernen i computeren, det er den del der står for processeringen.</p>
+  <img class="imagecenter" src="i7.png" alt="CPU" width="65%" height="65%">
+</div>
+
+<div id="RAM" class="tabcontent">
+  <h3>RAM</h3>
+  <p class="Tbox">RAM svare lidt til menneskets korttidshukommelse, det er her computeren lager programers dataer der bruges til at køre det valgte program.</p>
+  <img class="imagecenter" src="ram.jpg" alt="RAM" width="85%" height="85%">
+</div>
+
+<div id="GPU" class="tabcontent">
+  <h3>GPU</h3>
+  <p class="Tbox">GPU'en er den graffiske prossesor i comupteren, den søre for at genere billedet på skærmen.</p>
+  <img class="imagecenter" src="gpu.png" alt="GPU" width="85%" height="85%">
+</div>
+
+<div id="PSU" class="tabcontent">
+  <h3>PSU</h3>
+  <p class="Tbox">PSU står for Power Supply Unit, hvilket oversættes til strømforsyning. Strømforsyningen lervere strøm til alle komponenterne.</p>
+  <img src="psu.png" alt="PSU">
+</div>
+
+<div id="Interfaces" class="tabcontent">
+  <h3>Interfaces</h3>
+  <p class="Tbox">Interfaces.</p>
+</div>
+
+<div id="ESD" class="tabcontent">
+  <h3>ESD</h3>
+  <p class="Tbox">Eller Electro Static Discharge, er en elektrisk spænding der kan oplades i kroppen ved hverdags aktiviteter. Spændingen kan aflades ved at rør ved kabinetet for at sikkre ikke at skade komponenter ved installation.</p>
+</div>
+  </section>
+
+  <script>
+  function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+  </script>
+  <script>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
